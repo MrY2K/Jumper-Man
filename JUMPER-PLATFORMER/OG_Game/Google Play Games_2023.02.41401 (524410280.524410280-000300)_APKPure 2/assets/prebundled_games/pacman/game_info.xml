@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Information about the prebundled game "Pac-Man". -->
+<gameinfo
+    developer="Google"
+    themeColor="#000000"
+    iconFilename="icon.webp"
+    iconBackgroundColor="#000000"
+    animationFilename="animation.json"
+    hiResImageFilename="preview.png"
+    featuredImageFilename="banner.webp"
+    backgroundImageFilename="background.png"
+    launchType="web_game"
+    gameUri="logos/2010/pacman10-i.html"
+    archiveFilename="pacman.9.zip"
+    orientation="landscape"
+    supportsAtv="false"
+    screenName="PAC-MAN_GS_09"/>

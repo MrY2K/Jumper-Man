@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Information about the prebundled game "Solitaire". -->
+<gameinfo
+    developer="Google"
+    themeColor="#2b7b3b"
+    iconFilename="icon.webp"
+    iconBackgroundColor="#0a9d5c"
+    animationFilename="animation.json"
+    hiResImageFilename="preview.png"
+    featuredImageFilename="banner.webp"
+    backgroundImageFilename="background.png"
+    launchType="web_game"
+    gameUri="standalone_i18n.html"
+    archiveFilename="solitaire.9.zip"
+    screenName="Solitaire_GS_9"
+    supportsAtv="false"
+    applicationId="1098082826382"/>

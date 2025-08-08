@@ -1,0 +1,33 @@
+Camera = {}
+
+function Camera:load()
+    self.x = 0
+    self.y = 0
+end
+
+function Camera:toScreen(worldX, worldY)
+    return worldX - self.x, worldY - self.y
+end
+
+function Camera:update(player)
+    -- Center the camera on the player
+    -- self.x = player.x - love.graphics.getWidth() / 2 + player.width / 2
+    self.y = player.y - love.graphics.getHeight() / 2 + player.height / 2
+
+    -- Optional: Clamp the camera to the world boundaries
+    -- self.x = math.max(0, self.x)
+    self.y = math.max(0, self.y)
+end
+
+function Camera:apply()
+    -- Apply the translation for the camera
+    love.graphics.push()
+    love.graphics.translate(-self.x, -self.y)
+end
+
+function Camera:reset()
+    -- Reset the transformation after drawing
+    love.graphics.pop()
+end
+
+return Camera

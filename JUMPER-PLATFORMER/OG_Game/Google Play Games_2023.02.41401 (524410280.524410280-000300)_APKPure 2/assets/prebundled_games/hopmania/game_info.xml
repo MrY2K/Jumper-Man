@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Information about the prebundled game "Hop Mania". -->
+<gameinfo
+    developer="Google"
+    themeColor="#2d7516"
+    iconFilename="icon.webp"
+    iconBackgroundColor="#2d7516"
+    hiResImageFilename="icon.webp"
+    featuredImageFilename="banner.webp"
+    launchType="web_game"
+    gameUri="index.html"
+    archiveFilename="hopmania.2.zip"
+    orientation="portrait"
+    supportsAtv="false"
+    screenName="HopMania_GS_02"/>

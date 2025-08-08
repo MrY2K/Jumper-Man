@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Information about the prebundled game "Cricket". -->
+<gameinfo
+    developer="Google"
+    themeColor="#d6f197"
+    iconFilename="icon.webp"
+    iconBackgroundColor="#fdbc03"
+    animationFilename="animation.json"
+    hiResImageFilename="preview.png"
+    featuredImageFilename="banner.webp"
+    backgroundImageFilename="background.png"
+    launchType="web_game"
+    gameUri="logos/2017/cricket17_2/cricket17.html"
+    archiveFilename="cricket.11.zip"
+    screenName="Cricket_GS_11"
+    supportsAtv="false"
+    applicationId="1069888539811"/>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Information about the prebundled game "Minesweeper". -->
+<gameinfo
+    developer="Google"
+    themeColor="#578a34"
+    iconFilename="icon.webp"
+    iconBackgroundColor="#98d8ff"
+    animationFilename="animation.json"
+    hiResImageFilename="preview.png"
+    featuredImageFilename="banner.webp"
+    backgroundImageFilename="background.png"
+    launchType="web_game"
+    gameUri="minesweeper.html"
+    archiveFilename="minesweeper.1.zip"
+    orientation="portrait"
+    supportsAtv="false"
+    screenName="Minesweeper"/>

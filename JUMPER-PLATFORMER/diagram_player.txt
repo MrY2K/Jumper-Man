@@ -1,0 +1,74 @@
+Player Object
+  ├── Attributes
+  │    ├── Position: x, y
+  │    ├── Size: width, height
+  │    ├── Speed: speed
+  │    ├── Jumping Mechanics
+  │    │    ├── gravity
+  │    │    ├── jumpForce
+  │    │    ├── velocityY
+  │    │    ├── isJumping
+  │    └── States
+  │         ├── isMovingLeft
+  │         ├── isMovingRight
+  │         ├── isDead
+  │         ├── hasJumped
+  │         └── currentPlatform
+  │
+  ├── Hitbox
+  │    ├── Dimensions: hitboxWidth, hitboxHeight
+  │    ├── Offsets: hitboxOffsetX, hitboxOffsetY
+  │
+  ├── Art (ASCII Representations)
+  │    ├── art.stand
+  │    ├── art.jump
+  │    └── art.moving (left, right)
+  │
+  ├── Functions
+  │    ├── Player:load()
+  │    │    ├── Initializes attributes and art
+  │    │    └── Resets player state
+  │    │
+  │    ├── Player:update(dt, platform)
+  │    │    ├── Calls:
+  │    │    │    ├── movement(dt)
+  │    │    │    ├── applyGravity(dt)
+  │    │    │    ├── wrapAroundScreen()
+  │    │    │    └── alwaysJump(platform)
+  │    │    ├── Updates currentPlatform based on collision
+  │    │    └── Ends if isDead is true
+  │    │
+  │    ├── Player:getHitbox()
+  │    │    └── Returns player's hitbox as a table
+  │    │
+  │    ├── Player:movement(dt)
+  │    │    ├── Moves player left/right based on input
+  │    │    └── Updates isMovingLeft/isMovingRight
+  │    │
+  │    ├── Player:applyGravity(dt)
+  │    │    ├── Updates velocityY and position
+  │    │    └── Checks for ground collision and updates isDead
+  │    │
+  │    ├── Player:jump()
+  │    │    ├── Sets isJumping to true
+  │    │    └── Applies upward velocity (jumpForce)
+  │    │
+  │    ├── Player:alwaysJump(platform)
+  │    │    ├── Ensures player jumps when on a platform
+  │    │    └── Checks hitbox collisions
+  │    │
+  │    ├── Player:wrapAroundScreen()
+  │    │    ├── Wraps player horizontally around screen edges
+  │    │
+  │    └── Player:draw()
+  │         ├── Renders player using ASCII art
+  │         └── Adjusts drawing based on state (jumping, moving)
+  │
+  └── Collision Logic
+       ├── Uses Player:getHitbox() for accurate collision detection
+       ├── Checks if hitbox intersects with platform bounds
+       │    ├── Y-axis overlap: hitbox.y + hitbox.height >= platform.y
+       │    │                    AND hitbox.y < platform.y
+       │    └── X-axis overlap: hitbox.x + hitbox.width > platform.x
+       │                         AND hitbox.x < platform.x + platform.width
+       └── Calls Player:jump() if conditions are met
